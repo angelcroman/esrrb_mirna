@@ -1,0 +1,4 @@
+#code for extraction of ESRRB1 regulated/non-regulated genes (in MATLAB)
+pot_targets=targetsesrrb1(distesrrb1<5000);
+targets_mirnas_esrrb1_reg=intersect(cellstr(targetmirnas),cellstr(pot_targets))
+targets_mirnas_NOesrrb1_reg=setdiff(cellstr(targetmirnas),cellstr(pot_targets))
