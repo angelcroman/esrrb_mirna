@@ -2,7 +2,7 @@
 #extraction of peaks of Sevilla's chip-seq
 macs2 callpeak -t GSM785829_IP.bed -c GSM785840_input.bed -f BED -p 0.001 --nomodel -g mm -n ESRR1b
 #intersection with regulatory regions from 25922940 paper
-bedtools intersect -wa -a mirna_regions_25922940.bed -b ESRR1b_summits.bed > intersect_mirna_chen_summitsb.bed
+bedtools intersect -wa -a mirna_regions_25922940.bed -b ESRR1b_summits.bed > intersect_mirna_25922940_summitsb.bed
 #intersection with ESRRB1-regulated miRNAS (25922940) in MATLAB
 intersect(mirnaesrrb25922940,intersectmirna25922940summitsb)
 
